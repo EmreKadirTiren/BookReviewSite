@@ -20,24 +20,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const query = this.value.toLowerCase();
         
         books.forEach(book => {
-            //TODO: add a ID to each of the title author ect. and use that to search
-            const title = book.querySelector('h3').textContent.toLowerCase(); 
-            const author = book.textContent.toLowerCase();                              
-            const description = book.querySelector('p').textContent.toLowerCase(); 
-            const year = book.querySelector('p').textContent.toLowerCase();
-            const publisher = book.querySelector('p').textContent.toLowerCase(); 
-            const isbn = book.querySelector('p').textContent.toLowerCase();
-            const pages = book.querySelector('p').textContent.toLowerCase();
-            const genre = book.querySelector('p').textContent.toLowerCase();
-        // const rating = number -> stars -> find the number of stars -> convert to string -> compare with query
+            const title = book.querySelector('.title').textContent.toLowerCase(); 
+            const author = book.querySelector('.author').textContent.toLowerCase();                              
+            const reviewer = book.querySelector('.reviewer').textContent.toLowerCase();
+            const pages = book.querySelector('.pages').textContent.toLowerCase();
+            const yearwritten = book.querySelector('.yearwritten').textContent.toLowerCase();
+            const publisher = book.querySelector('.publisher').textContent.toLowerCase();
+            const genre = book.querySelector('.genre').textContent.toLowerCase();
+            const isbn = book.querySelector('.isbn').textContent.toLowerCase();
+            // const rating = number -> stars -> find the number of stars -> convert to string -> compare with query
 
-
-
-            if(title.includes(query) || author.includes(query) || description.includes(query) || year.includes(query) || publisher.includes(query) || isbn.includes(query) || pages.includes(query) || genre.includes(query) || rating.includes(query)) {
-                book.style.display = 'block';
+            if(title.includes(query) || author.includes(query) || reviewer.includes(query) || pages.includes(query) || yearwritten.includes(query) || publisher.includes(query) || genre.includes(query) || isbn.includes(query)) {
+                book.style.display = '';
             } else {
                 book.style.display = 'none';
             }
+           
         });
     });
 });
