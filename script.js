@@ -28,9 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const publisher = book.querySelector('.publisher').textContent.toLowerCase();
             const genre = book.querySelector('.genre').textContent.toLowerCase();
             const isbn = book.querySelector('.isbn').textContent.toLowerCase();
+            const tags = book.querySelector('.tags').textContent.toLowerCase();
+            const date = book.querySelector('.date-reviewed').textContent.toLowerCase();
             // const rating = number -> stars -> find the number of stars -> convert to string -> compare with query
 
-            if(title.includes(query) || author.includes(query) || reviewer.includes(query) || pages.includes(query) || yearwritten.includes(query) || publisher.includes(query) || genre.includes(query) || isbn.includes(query)) {
+            if(title.includes(query) || author.includes(query) || reviewer.includes(query) || pages.includes(query) || yearwritten.includes(query) || publisher.includes(query) || genre.includes(query) || tags.includes(query) || date.includes(query) || isbn.includes(query)) {
                 book.style.display = '';
             } else {
                 book.style.display = 'none';
