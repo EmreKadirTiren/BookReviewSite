@@ -1,0 +1,54 @@
+body { font-family: Arial, sans-serif; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #f0f0f0; }
+nav a { margin: 0 10px; text-decoration: none; color: #333; }
+
+.author-container {
+	margin: 20px;
+	padding: 15px;
+	background-color: #f0f0f0;
+	border-radius: 8px;
+}
+
+.profile-pic {
+	width: 100px; /* Adjust based on preference */
+	height: auto;
+	border-radius: 50%; /* Circular profile picture */
+	margin-right: 15px;
+	float: left;
+}
+
+h1, h2, h3 {
+	color: #333;
+	text-align: center;
+}
+
+.short-description, .interesting-fact, .about-author p, blockquote, .gallery img, iframe, .contact-link {
+	margin: 15px auto;
+	text-align: center;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.gallery img {
+	margin: 10px;
+	max-width: 100px; /* Adjust based on preference */
+	border-radius: 5px;
+}
+
+.contact-link {
+	display: inline-block;
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 5px;
+	margin: 20px auto;
+}
+
+.contact-link:hover {
+	background-color: #555;
+}

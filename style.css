@@ -18,3 +18,18 @@ footer {
     margin: auto;
     width: 80%;
 }
+
+.tags span { /* Style for the tags */
+	background-color: #e0e0e0; /* Light grey background */
+	color: #333; /* Dark text color */
+	padding: 5px 10px; /* Top and bottom padding, left and right padding */
+	margin: 0 5px 5px 0; /* Space between tags */
+	display: inline-block; /* Allows for padding and margin */
+	border-radius: 15px; /* Rounded corners */
+	cursor: pointer; /* Changes cursor to indicate it's clickable */
+	font-size: 0.8em; /* Smaller font size */
+  }
+  
+  .tags span:hover {
+	background-color: #d0d0d0; /* Slightly darker on hover */
+  }
