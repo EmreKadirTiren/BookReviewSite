@@ -1,0 +1,109 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #007bff; /* Vibrant blue */
+  color: #ffffff;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #dfe6e9;
+}
+
+.search-bar {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.book {
+  width: 30%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.book:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.book img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: #007bff;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  margin: auto;
+  width: 80%;
+}
+
+.tags span {
+  background-color: #007bff; /* Matching vibrant blue */
+  color: #ffffff;
+  padding: 5px 10px;
+  margin: 0 5px 5px 0;
+  display: inline-block;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.tags span:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+#theme-switcher {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-switcher {
+  background-color: #007bff; /* Vibrant blue */
+  color: #ffffff;
+}
+
+#theme-switcher:hover {
+  background-color: #0056b3; /* A darker shade of blue for hover */
+}

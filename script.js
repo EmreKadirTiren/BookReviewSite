@@ -41,3 +41,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const themeSwitcher = document.getElementById('theme-switcher');
+    const themeLink = document.querySelector('link[href*="style"]'); // Assuming there's only one stylesheet link that includes 'style' in its href
+
+    themeSwitcher.addEventListener('click', function() {
+        if (themeLink.href.includes('lightstyle.css')) {
+            themeLink.href = themeLink.href.replace('lightstyle.css', 'darkstyle.css');
+        } else {
+            themeLink.href = themeLink.href.replace('darkstyle.css', 'lightstyle.css');
+        }
+    });
+});
