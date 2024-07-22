@@ -1,0 +1,151 @@
+/* Light Mode Styles for Review Page */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-details-box {
+  flex: 1;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-right: 20px;
+  background-color: #ffffff; /* Light background for the details box */
+}
+
+.book-review-text {
+  flex: 2;
+  padding: 20px;
+  background-color: #ffffff; /* Light background for the review text */
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .book-details-box, .book-review-text {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #007bff; /* Vibrant blue */
+  color: #ffffff;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.book {
+  width: 30%;
+  box-shadow: 0 0 10px #ccc;
+  margin-bottom: 20px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #ffffff; /* Light background for each book */
+}
+
+.book img {
+  width: 100%;
+}
+
+footer {
+  background-color: #007bff;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.tags span {
+  background-color: #007bff; /* Matching vibrant blue */
+  color: #ffffff;
+  padding: 5px 10px;
+  margin: 0 5px 5px 0;
+  display: inline-block;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+
+#theme-switcher {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-switcher {
+  background-color: #007bff; /* Vibrant blue */
+  color: #ffffff;
+}
+
+#theme-switcher:hover {
+  background-color: #0056b3; /* A darker shade of blue for hover */
+}
+
+.author-section {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f0f0f0; /* Light grey background */
+  border-radius: 8px;
+}
+
+.author-profile-pic {
+  width: 100px; /* Adjust based on your preference */
+  height: auto;
+  border-radius: 50%; /* Circular profile picture */
+  margin-right: 15px;
+  float: left;
+}
+
+.author-name {
+  margin: 0;
+  padding-top: 10px; /* Align with the top of the profile picture */
+}
+
+.author-story {
+  clear: both; /* Ensure the text does not wrap around the image */
+  margin-top: 10px;
+}
+
+.author-page-link {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.author-extras {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e9ecef; /* Lighter grey */
+  border-radius: 5px;
+}

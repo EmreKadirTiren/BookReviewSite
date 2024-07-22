@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Author Page - John Doe</title>
-	<link rel="stylesheet" href="JohnDoe.css">
-	<link rel="icon" type="image/x-icon" href="logo.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author Page - John Doe</title>
+    <link id="theme-style" rel="stylesheet" href="../AuthorLight.css">
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
 </head>
 <body>
-	<header>
-		<h1>John Doe</h1>
-		<nav>
+    <header>
+        <h1>John Doe</h1>
+        <nav>
+            <a href="../../index.html">Home</a> | 
+            <a href="me.html">About Me</a>
+        </nav>
+        <button id="theme-switcher">Switch Theme</button>
+    </header>
+    <div class="author-container">
+        <img src="../../BookReviews/Inferno/infernobookcovertest.png" alt="John Doe" class="profile-pic">
+        <h1>John Doe</h1>
+        <p class="short-description">A passionate storyteller known for weaving intricate narratives.</p>
+        <p class="interesting-fact">Interesting Fact: John has climbed Mount Everest twice!</p>
+        <div class="about-author">
+            <h2>About John</h2>
+            <p>John Doe has been a figure in the world of literature for over a decade, captivating audiences with his unique blend of mystery and adventure...</p>
+        </div>
+        <div class="unique-elements">
+            <blockquote>"To write is to explore the universe."</blockquote>
+            <ul class="achievements">
+                <li>Winner of the International Book Award 2020</li>
+                <li>Creator of the beloved "Adventures in Time" series</li>
+            </ul>
+            <div class="gallery">
+                <h3>Gallery</h3>
+                <img src="../../BookReviews/Inferno/infernobookcovertest.png" alt="Book Cover 1">
+                <img src="../../BookReviews/Inferno/infernobookcovertest.png" alt="Book Cover 2">
+            </div>
+        </div>
+    </div>
+    <script>
+        const themeSwitcher = document.getElementById('theme-switcher');
+        const themeStyle = document.getElementById('theme-style');
 
-			<a href="../../index.html">Home</a> | 
-			<a href="me.html">About Me</a>
-		</nav>
-			<!--Not needed because nothing to search  <input class="search-bar" type="search" placeholder="Search..."> -->
-	</header>
-	<div class="author-container">
-		<img src="../../BookReviews/Inferno/infernobookcovertest.png" alt="John Doe" class="profile-pic">
-		<h1>John Doe</h1>
-		<p class="short-description">A passionate storyteller known for weaving intricate narratives.</p>
-		<p class="interesting-fact">Interesting Fact: John has climbed Mount Everest twice!</p>
-		<div class="about-author">
-			<h2>About John</h2>
-			<p>John Doe has been a figure in the world of literature for over a decade, captivating audiences with his unique blend of mystery and adventure...</p>
-		</div>
-		<!-- Unique Elements -->
-		<div class="unique-elements">
-			<blockquote>"To write is to explore the universe."</blockquote>
-			<ul class="achievements">
-				<li>Winner of the International Book Award 2020</li>
-				<li>Creator of the beloved "Adventures in Time" series</li>
-			</ul>
-			<div class="gallery">
-				<h3>Gallery</h3>
-				<img src="../../BookReviews/Inferno/infernobookcovertest.png" alt="Book Cover 1">
-				<img src="../../BookReviews/Inferno/infernobookcovertest.png" alt="Book Cover 2">
-			</div>
-			<!-- If you want to add a video <iframe width="560" height="315" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-		</div>
-	</div>
-	<script src="../../BookReviews/comment.js"></script>
+        themeSwitcher.addEventListener('click', () => {
+            if (themeStyle.getAttribute('href').includes('Light')) {
+                themeStyle.setAttribute('href', '../AuthorDark.css');
+            } else {
+                themeStyle.setAttribute('href', '../AuthorLight.css');
+            }
+        });
+    </script>
 </body>
 </html>

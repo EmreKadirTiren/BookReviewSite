@@ -4,17 +4,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Book Review</title>
-	<link rel="stylesheet" href="../ReviewPage.css">
 	<link rel="icon" type="image/x-icon" href="logo.jpg">
+	<link rel="stylesheet" href="../ReviewDark.css">
 </head>
 <body>
 	<header>
-		<h1>Book Review</h1>
+		<!-- <h1>Book Review</h1> -->
 		<nav>
-
 			<a href="../../index.html">Home</a> | 
-			<a href="me.html">About Me</a>
+			<a href="me.html">About Me</a> | 
+			<a href="../../newsletter.html">Newsletter</a>
 		</nav>
+		<button id="theme-switcher">Switch Theme</button>
 			<!--Not needed because nothing to search  <input class="search-bar" type="search" placeholder="Search..."> -->
 	</header>
 	<main>
@@ -59,5 +60,33 @@
 		</div>
 	</footer>
 	<script src="../comment.js" ></script>
+	<script> 
+		document.addEventListener('DOMContentLoaded', (event) => {
+    const themeSwitcher = document.getElementById('theme-switcher');
+    const themeLink = document.querySelector('link[rel="stylesheet"]');
+
+    // Function to switch theme
+    function switchTheme() {
+        const currentTheme = themeLink.getAttribute('href');
+        if (currentTheme.includes('Light')) {
+            themeLink.setAttribute('href', '../ReviewDark.css'); 
+        } else {
+            themeLink.setAttribute('href', '../ReviewLight.css');
+        }
+    }
+
+    // Load saved theme from localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        themeLink.setAttribute('href', savedTheme);
+    }
+
+    // Event listener for the theme switcher button
+    themeSwitcher.addEventListener('click', () => {
+        switchTheme();
+        localStorage.setItem('theme', themeLink.getAttribute('href')); // Save the current theme to localStorage
+    });
+});
+	</script>
 </body>
 </html>
